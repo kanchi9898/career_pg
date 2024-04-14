@@ -25,6 +25,9 @@
   height: calc(100% / 4);
   overflow: hidden;
 }
+#rounded-div{
+  transform: translate(-50%);
+}
 
 .bg-herobg {
   background-image: url(https://metalogic.com.np/herobg.svg);
@@ -33,6 +36,7 @@
   font-style: normal;
 }
 .text-sm {
+  /* color: #0000006f; */
   font-size: 0.88rem;
   line-height: 1.25rem;
 }
