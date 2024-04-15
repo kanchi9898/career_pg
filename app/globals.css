@@ -2,14 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face{
+@font-face {
   font-family: fontOne;
   src: url("/font/font2.ttf");
-}
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 .row_div {
@@ -19,14 +14,23 @@
   width: calc(200vw / 5);
   height: 100%;
 }
-.img_div{
+.img_div {
   border-radius: 10px;
   width: 100%;
   height: calc(100% / 4);
   overflow: hidden;
 }
 #rounded-div{
+  position: absolute;
+  left: 50%;
+  width: 150%;
+  height: 750%;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  /* background: #000; */
   transform: translate(-50%);
+ 
+  
 }
 
 .bg-herobg {

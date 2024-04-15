@@ -6,6 +6,7 @@ import Lenis from '@studio-freight/lenis';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useLayoutEffect } from "react";
+import Headingpart from "./components/Headingpart";
 
 export default function Home() {
   useEffect(() => {
@@ -35,10 +36,10 @@ export default function Home() {
       scrollTrigger: {
         trigger: "#part-1",
         start: "50% 50%",
-        end: "250% 50%",
+        end: "200% 50%",
         scrub: true,
         // markers: true,
-        pin: true
+        // pin: true
       }
     })
     tl.to("#rotate_div", {
@@ -91,12 +92,35 @@ export default function Home() {
         start: "0% 70%",
         end: "50% 50%",
         scrub: true,
-        markers: true,
+        // markers: true,
       }
-    }).to("#rounded_wrap",{
-          height: 0,
-          marginTop: 0
+    }).to("#rounded_wrap", {
+      height: "0",
+      marginTop: "0"
     })
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#part-3",
+        start: "50% 50%",
+        end: "200% 50%",
+        scrub: 1,
+        markers: true,
+        pin: true
+      }
+    }).to(".c-one", {
+      marginTop: "-25%",
+      opacity: "1"
+    }, "c1")
+      .to(".c-two", {
+        opacity: "1"
+      }, "c2")
+      .to(".c-one", {
+        marginTop: "-100",
+        opacity: "0"
+      }, "c2")
+
+
   }, [])
 
   return (
@@ -218,11 +242,49 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="part_2" className="w-full h-[100vh] bg-white">
-      <div id="rounded_wrap" className="w-full relative h-[100px] overflow-hidden mt-[-100px]">
-        <div id="rounded-div" className="absolute left-[50%] w-[150%] h-[750%] rounded-[50%] bg-white"></div>
+
+      <div id="part-2" className="w-full h-[10vh] bg-white">
+        <div id="rounded_wrap" className="w-full relative h-[100px] overflow-hidden mt-[-100px]">
+          <div id="rounded-div"></div>
+        </div>
       </div>
+      {/* <div className="w-full h-[100vh]">
+        <Headingpart title1="Values" title2="We Believe in" title3="We believe in creating an environment where individuals can thrive and make a meaningful impact." />
+      </div> */}
+      <div id="part-3" className="w-full h-[100vh] bg-white flex">
+        <div className="left_part-3 w-[50%] h-full flex flex-col items-start justify-center gap-[1vw] pl-[3vw]">
+          <h2 className="text-[1.5vw] text-red">Values</h2>
+          <h1 className="text-[7vw] font-semibold text-primary">We Believe in</h1>
+          <p className="font-medium">We believe in creating an environment where individuals can thrive and make a meaningful impact.</p>
+          <div className="bg-zinc-200 rounded-full h-[7vw] w-[7vw] flex items-center justify-center p-6">
+            <img src="/icons/star.svg" alt="star" />
+          </div>
+        </div>
+        <div className="right_part-3 h-[200%] w-[50%] flex flex-col gap-[40vh] mt-[45%] pl-[3vw]">
+          <div className="flex flex-col gap-[5vh] opacity-0 c-one">
+            <div className="flex items-center justify-start gap-[2vw]">
+              <img className="h-[5vw] w-[5vw]" src="/icons/continious_learning.36f5be64.svg" alt="img_icon" />
+              <h1 className="text-primary font-medium text-[2vw]">Continious Learning</h1>
+            </div>
+            <p className="text-[1.2vw] font-medium text-gray">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="flex flex-col gap-[5vh] opacity-0 c-two">
+            <div className="flex items-center justify-start gap-[2vw]">
+              <img className="h-[5vw] w-[5vw]" src="/icons/continious_learning.36f5be64.svg" alt="img_icon" />
+              <h1 className="text-primary font-bold text-[2vw]">Continious Learning</h1>
+            </div>
+            <p className="text-[1.5vw] font-medium text-gray">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="flex flex-col gap-[5vh] opacity-0 c-three">
+            <div className="flex items-center justify-start gap-[2vw]">
+              <img className="h-[5vw] w-[5vw]" src="/icons/continious_learning.36f5be64.svg" alt="img_icon" />
+              <h1 className="text-primary font-bold text-[2vw]">Continious Learning</h1>
+            </div>
+            <p className="text-[1.5vw] font-medium text-gray">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+        </div>
       </div>
+
       {/* <Footer /> */}
     </>
   );
