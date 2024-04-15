@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="part_2" className="w-full h-[100vh] bg-white">
+      <div id="part-2" className="w-full h-[100vh] bg-white">
       <div id="rounded_wrap" className="w-full relative h-[100px] overflow-hidden mt-[-100px]">
         <div id="rounded-div" className="absolute left-[50%] w-[150%] h-[750%] rounded-[50%] bg-white"></div>
       </div>
