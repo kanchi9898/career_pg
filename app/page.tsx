@@ -5,10 +5,48 @@ import Navbar from "./components/Navbar";
 import Lenis from '@studio-freight/lenis';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Headingpart from "./components/Headingpart";
+import Skill from "./components/list";
+import ImageComp from "./components/Model";
+
+
+
+const List = [
+  {
+    name: "Performance Bonus",
+    image: "/icons/bonus_1.svg",
+    color: "#fff"
+  },
+  {
+    name: "Health Benefits",
+    image: "/icons/bonus_1.svg",
+    color: "#e53b3a"
+  },
+  {
+    name: "Paid Leave Policy",
+    image: "/icons/bonus_1.svg",
+    color: "#DDEE10"
+  },
+  {
+    name: "Learning And Development",
+    image: "/icons/bonus_1.svg",
+    color: "#CB1F8A"
+  },
+  {
+    name: "Food Credit",
+    image: "/icons/bonus_1.svg",
+    color: "#2AE6C1"
+  },
+  {
+    name: "Team Activities",
+    image: "/icons/bonus_1.svg",
+    color: "#2A7DE6"
+  },
+]
 
 export default function Home() {
+  const [model, setModel] = useState({ active: false, index: 0 })
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const lenis = new Lenis()
@@ -39,7 +77,7 @@ export default function Home() {
         end: "200% 50%",
         scrub: true,
         // markers: true,
-        // pin: true
+        pin: true
       }
     })
     tl.to("#rotate_div", {
@@ -345,47 +383,47 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="part-4" className="h-max pt-[3vw] w-full bg-primary">
+      <div id="part-4" className="h-max pt-[3vw] w-full bg-gray">
         <Headingpart title1="Benifits" title2sp="Life At MetaLogic" />
         <div className="grid grid-cols-4 p-[3vw] gap-[1vw]">
-          <div className="card-1 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-1 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-2 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-2 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
 
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-3 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-3 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
 
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-4 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-4 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-5 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-5 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-6 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-6 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-7 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-7 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
           </div>
-          <div className="card-8 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+          <div className="card-8 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
             <h1 className="text-primary font-semibold">Continious Learning</h1>
             <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
@@ -393,7 +431,73 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="part-5" className="h-[100vh] w-full bg-white"></div>
+      <div id="part-5" className="h-max w-full bg-primary p-[5vw]">
+        <div className="flex text-white gap-[3vw]">
+          <h1 className="flex-1 text-[5vw] font-semibold">Metalogic Cares For You</h1>
+
+          <p className='flex-1 text-[1.2vw]'>We're less about valuing perks and more about valuing people. Our employee benefits are built around enhancing your wellbeing - at work and at home.</p>
+        </div>
+
+        <div className="text-[3vw] text-gray">
+
+          <div className='relative'>
+
+            {
+              List.map((i, j) => (
+                <Skill Item={i} key={j} index={j} Model={setModel} />
+              ))
+            }
+            <ImageComp List={List} Model={model} />
+          </div>
+
+          {/* <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>01.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-10'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Food Credit</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Food Credit</span>
+            </div>
+          </div> */}
+          {/* <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>02.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-10'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Health Benefits</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Health Benefits</span>
+            </div>
+          </div>
+
+          <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>03.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-12'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Learning And Development</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Learning And Development</span>
+            </div>
+          </div>
+          <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>04.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-12'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Performance Bonus</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Performance Bonus</span>
+            </div>
+          </div>
+
+          <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>05.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-10'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Paid Leave Policy</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Paid Leave Policy</span>
+            </div>
+          </div>
+          <div className="group flex border-b-2 items-center justify-between cursor-pointer py-[1vw]">
+            <h2>06.</h2>
+            <div className='p-1 overflow-hidden relative cursor-pointer leading-10'>
+              <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Team Activities</span>
+              <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Team Activities</span>
+            </div>
+          </div> */}
+
+
+        </div>
+      </div>
 
 
       {/* <Footer /> */}
