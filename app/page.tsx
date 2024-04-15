@@ -39,7 +39,7 @@ export default function Home() {
         end: "200% 50%",
         scrub: true,
         // markers: true,
-        pin: true
+        // pin: true
       }
     })
     tl.to("#rotate_div", {
@@ -96,7 +96,79 @@ export default function Home() {
       height: "0",
       marginTop: "0"
     })
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#part-3",
+        start: "top 50%",
+        end: "50% top",
+        scrub: true,
+        // markers: true,
+      }
+    }).to("#part-3 .card-1", {
+      opacity: 1,
+      delay: "0.2"
+    }, "b")
+      .to("#part-3 .card-2", {
+        opacity: 1,
+        delay: "0.4"
+      }, "b")
+      .to("#part-3 .card-3", {
+        opacity: 1,
+        delay: "0.6"
+      }, "b")
+      .to("#part-3 .card-4", {
+        opacity: 1,
+        delay: "0.8"
+      }, "b")
+      .to("#part-3 .card-5", {
+        opacity: 1,
+        delay: "0.9"
+      }, "b")
+      .to("#part-3 .card-6", {
+        opacity: 1,
+        delay: "1.2"
+      }, "b")
 
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#part-4",
+        start: "top 50%",
+        end: "50% 30%",
+        scrub: true,
+        // markers: true,
+      }
+    }).to("#part-4 .card-1", {
+      opacity: 1,
+      delay: "0.2"
+    }, "c")
+      .to("#part-4 .card-2", {
+        opacity: 1,
+        delay: "0.3"
+      }, "c")
+      .to("#part-4 .card-3", {
+        opacity: 1,
+        delay: "0.4"
+      }, "c")
+      .to("#part-4 .card-4", {
+        opacity: 1,
+        delay: "0.5"
+      }, "c")
+      .to("#part-4 .card-5", {
+        opacity: 1,
+        delay: "0.6"
+      }, "c")
+      .to("#part-4 .card-6", {
+        opacity: 1,
+        delay: "0.7"
+      }, "c")
+      .to("#part-4 .card-7", {
+        opacity: 1,
+        delay: "0.8"
+      }, "c")
+      .to("#part-4 .card-8", {
+        opacity: 1,
+        delay: "0.9"
+      }, "c")
 
 
 
@@ -226,9 +298,103 @@ export default function Home() {
           <div id="rounded-div" className="absolute left-[50%] w-[150%] h-[750%] rounded-[50%] bg-white"></div>
         </div>
       </div>
-      <div className="part-3 w-full h-[100vh]">
+      <div id="part-3" className="w-full h-max flex flex-col gap-[3vh]">
         <Headingpart title1="Values" title2="We Believe in" title3="We believe in creating an environment where individuals can thrive and make a meaningful impact." />
+        <div className="grid grid-cols-3 p-[3vw] gap-[2vw]">
+          <div className="card-1 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">01.</div>
+            <div className="w-full bg-primary h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-2 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">02.</div>
+            <div className="w-full bg-primary h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-3 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">03.</div>
+            <div className="w-full bg-primary h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-4 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">04.</div>
+            <div className="w-full bg-red h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-5 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">05.</div>
+            <div className="w-full bg-red h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-6 relative overflow-hidden opacity-0 border-2 border-primary rounded p-[2vw] flex flex-col gap-[1vw] items-center justify-center">
+            <div className="w-full text-[1.5vw] z-10 text-white">06.</div>
+            <div className="w-full bg-red h-[3vw] absolute top-0 rotate-[-40deg] left-[-10vw]"></div>             <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+        </div>
       </div>
+
+      <div id="part-4" className="h-max pt-[3vw] w-full bg-primary">
+        <Headingpart title1="Benifits" title2sp="Life At MetaLogic" />
+        <div className="grid grid-cols-4 p-[3vw] gap-[1vw]">
+          <div className="card-1 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-2 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-3 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-4 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-5 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-6 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-7 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+          <div className="card-8 bg-white relative overflow-hidden opacity-0 border-2 border-primary rounded p-[1vw] flex flex-col gap-[1vw] items-center justify-center">
+            <img className="h-[5vw] w-5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
+            <h1 className="text-primary font-semibold">Continious Learning</h1>
+            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="part-5" className="h-[100vh] w-full bg-white"></div>
+
 
       {/* <Footer /> */}
     </>
