@@ -1,6 +1,25 @@
 
 import Link from "next/link";
+import { useEffect } from "react";
 const Navbar = () => {
+  useEffect(() => {
+    let lastScrollTop = 0;
+    let navbar = document.getElementById("spnav");
+
+    if (navbar) {
+      window.addEventListener("scroll", function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          navbar.style.top = "-100px";
+        } else {
+          navbar.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+      });
+    }
+
+  }, []);
   return (
     <main>
       <div className="absolute z-[100] flex w-full items-center justify-between p-4 lg:hidden">
@@ -20,45 +39,46 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <nav className="fixed hidden top-0 z-[1000] w-full bg-transparent items-center justify-between text-black backdrop-blur-xl border-b border-translucent-light-100 px-8 py-3 lg:flex">
+      <nav id="spnav" className="fixed hidden top-0 z-[1000] w-full bg-transparent items-center justify-between text-black backdrop-blur-xl border-b border-translucent-light-100 px-8 py-3 lg:flex">
         <Link href="/" className="flex items-center gap-4">
-            <img src="https://metalogic.com.np/metalogo.png" alt="metalogic company logo" className="h-12 w-12" />
-            <div className="flex flex-col">
-              <h1 className="flex text-3xl font-semibold tracking-widest text-primary">
-                <span>Meta</span><span>Logic</span>
-              </h1>
-            </div>
+          <img src="https://metalogic.com.np/metalogo.png" alt="metalogic company logo" className="h-12 w-12" />
+          <div className="flex flex-col">
+            <h1 className="flex text-3xl font-semibold tracking-widest text-primary">
+              <span>Meta</span><span>Logic</span>
+            </h1>
+          </div>
         </Link>
-        <ul className="flex gap-8 font-semibold">
-          <li>
-            <Link href="/" >
-              <p className="Navbar_link__ambd4 relative null pb-1">Home</p>
+        <div id="menu" className="flex gap-8 font-semibold relative">
+        
+            <Link href="/" className="menuopt relative">
+              Home
             </Link>
-          </li>
-          <li>
-            <button className="Navbar_link__ambd4 outline:none">Services</button>
-          </li>
-          <li>
-            <Link href="/careers" className="Navbar_link__ambd4 Navbar_active__WxVct">Career
-              {/* <a className="Navbar_link__ambd4 Navbar_active__WxVct">Career</a> */}
+          
+        
+            <Link href="/" className="menuopt relative">Services</Link>
+          
+        
+            <Link href="/careers" id="activemenuopt" className="menuopt relative">Career
             </Link>
-          </li>
-          <li>
-            <Link href="/blogs" className="Navbar_link__ambd4">Blogs
-              {/* <a className="Navbar_link__ambd4">Blogs</a> */}
+          
+        
+            <Link href="/blogs" className="menuopt relative">Blogs
             </Link>
-          </li>
-          <li>
-            <Link href="/about" className="Navbar_link__ambd4">About Us
-              {/* <a className="Navbar_link__ambd4">About Us</a> */}
+          
+        
+            <Link href="/about" className="menuopt relative">About Us
             </Link>
-          </li>
-        </ul>
-        <div>
-          <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-[600] transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 bg-secondary-400 text-white hover:border-secondary-400">Get in Touch
-          </Link>
+          
         </div>
+        <div className="group flex-[0.2] w-full bg-red text-white rounded flex items-center justify-center cursor-pointer">
+              <div className='p-1 overflow-hidden relative leading-8'>
+                <span className='inline-block transition duration-500 ease-out group-hover:-translate-y-[180%]'>Get In Touch</span>
+                <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Get In Touch</span>
+              </div>
+            </div>
       </nav>
+
+
     </main>
 
   );
