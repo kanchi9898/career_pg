@@ -40,7 +40,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: "#part-1",
         start: "50% 50%",
-        end: "200% 50%",
+        end: "150% 50%",
         scrub: true,
         pin: true
       }
@@ -216,7 +216,9 @@ export default function Home() {
               </div>
             </div>
             <div id="row_div_2" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[5%] md:mt-[11%]">
-              
+              <div className="img_div">
+                <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
+              </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m11.jpg" alt="img_1" width={500} height={500} />
               </div>
@@ -224,10 +226,7 @@ export default function Home() {
                 <Image className="w-full h-full" src="/vfolder/m14.jpg" alt="img_1" width={500} height={500} />
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
-              </div>
-              <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m3.jpg" alt="img_1" width={500} height={500} />
               </div>
             </div>
             <div id="row_div_3" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[0%] md:mt-[8%]">
@@ -240,18 +239,18 @@ export default function Home() {
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m15.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m12.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m16.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m19.jpg" alt="img_1" width={500} height={500} />
 
               </div>
             </div>
             <div id="row_div_4" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[-4%] md:mt-[4%]">
               
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m19.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m15.jpg" alt="img_1" width={500} height={500} />
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img_1" width={500} height={500} />
@@ -403,7 +402,7 @@ export default function Home() {
           <p className="text-center md:text-[2vw] lg:text-[1.1vw]">Stay informed, inspired, and equipped with the latest trends and breakthroughs in your field.</p>
 
           <div className="flex w-full gap-[1vw] flex-col sm:flex-row">
-            <input className="flex-[0.8] w-full p-2 md:p-3 outline-none rounded" type="text" placeholder="Enter your Email address" />
+            <input className="flex-[0.8] text-black w-full p-2 md:p-3 outline-none rounded" type="text" placeholder="Enter your Email address" />
             <div className="group flex-[0.2] w-full bg-red text-white rounded flex items-center justify-center cursor-pointer">
               <div className='p-1 overflow-hidden relative leading-8'>
                 <span className='inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[180%]'>Subscribe</span>
