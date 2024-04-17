@@ -59,11 +59,11 @@ export default function Home() {
     }, "a")
 
     tl.to("#row_div_4", {
-      marginTop: "-7%"
+      marginTop: "-1%"
     }, "a")
 
     tl.to("#row_div_5", {
-      marginTop: "-9%"
+      marginTop: "-5%"
     }, "a")
     tl.to("#over_lay h1", {
       opacity: "1"
@@ -90,9 +90,9 @@ export default function Home() {
     gsap.timeline({
       scrollTrigger: {
         trigger: "#part-2",
-        start: "0% 70%",
-        end: "50% 50%",
-        scrub: true,
+        start: "0% 50%",
+        end: "50% 20%",
+        scrub: true
       }
     }).to("#rounded_wrap", {
       height: "0",
@@ -207,35 +207,31 @@ export default function Home() {
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m2.jpg" alt="img_1" width={500} height={500} />
-
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m3.jpg" alt="img_1" width={500} height={500} />
-
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m4.jpg" alt="img_1" width={500} height={500} />
-
               </div>
             </div>
             <div id="row_div_2" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[5%] md:mt-[11%]">
-              <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m12.jpg" alt="img_1" width={500} height={500} />
-              </div>
+              
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m11.jpg" alt="img_1" width={500} height={500} />
-
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m14.jpg" alt="img_1" width={500} height={500} />
-
               </div>
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
-
+              </div>
+              <div className="img_div">
+                <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
               </div>
             </div>
             <div id="row_div_3" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[0%] md:mt-[8%]">
+             
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m9.jpg" alt="img_1" width={500} height={500} />
               </div>
@@ -253,15 +249,16 @@ export default function Home() {
               </div>
             </div>
             <div id="row_div_4" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[-4%] md:mt-[4%]">
+              
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m19.jpg" alt="img_1" width={500} height={500} />
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m18.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m17.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="https://cdn.pixabay.com/photo/2019/04/30/11/46/success-4168389_1280.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
@@ -270,6 +267,7 @@ export default function Home() {
               </div>
             </div>
             <div id="row_div_5" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[4%]">
+              
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m8.jpg" alt="img_1" width={500} height={500} />
               </div>
@@ -305,7 +303,7 @@ export default function Home() {
             </div>
           </div>
           <div className="absolute bottom-20 sm:bottom-5 flex flex-col justify-center items-center gap-1">
-            <h3 className="uppercase text-white font-semibold text-[3vw] sm:text-[1.9vw] md:text-[1.2vw] lg:text-[0.7vw] animate-bounce">Scroll Down</h3>
+            <h3 className="uppercase text-white font-medium text-[3vw] sm:text-[1.9vw] md:text-[1.2vw] lg:text-[0.7vw] animate-bounce">Scroll Down</h3>
             <div className="scroll_p h-[2px] w-[20vw] sm:w-[8vw] md:w-[7.5vw] lg:w-[5vw] bg-gray rounded-full">
               <div className="scroll_c h-[2px] w-[0vw] bg-white rounded-full"></div>
             </div>
@@ -398,7 +396,7 @@ export default function Home() {
       </div>
       <div id="part-8" className="h-[80vh] relative w-full flex items-center justify-center">
         <video autoPlay loop muted className="w-full h-full object-cover absolute inset-0 brightness-75">
-          <source src="/vfolder/getin touch.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2022/12/15/143016-781982529_large.mp4" type="video/mp4" />
         </video>
         <div className="z-10 text-white absolute w-[90%] md:w-[65%] lg:w-[50%] h-full gap-3 md:gap-[2vw] flex flex-col items-center justify-center">
           <h1 className="text-white text-[6vw] md:text-[4vw] lg:text-[3vw] font-semibold">Subscribe to our News Letters</h1>
