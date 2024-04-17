@@ -8,45 +8,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useLayoutEffect, useState } from "react";
 import Headingpart from "./components/Headingpart";
 import ImageComp from "./components/Model";
-import Carelist from "./components/list";
-
-
-
-const List = [
-  {
-    name: "Performance Bonus",
-    image: "/icons/bonus_1.svg",
-    color: "#e53b3a"
-  },
-  {
-    name: "Health Benefits",
-    image: "/icons/health.svg",
-    color: "#DD9710"
-  },
-  {
-    name: "Paid Leave Policy",
-    image: "/icons/paidleave.svg",
-    color: "#DDEE10"
-  },
-  {
-    name: "Learning And Development",
-    image: "/icons/learning.svg",
-    color: "#CB1F8A"
-  },
-  {
-    name: "Food Credit",
-    image: "/icons/food_1.svg",
-    color: "#2AE6C1"
-  },
-  {
-    name: "Team Activities",
-    image: "/icons/teambuilding.svg",
-    color: "#2A7DE6"
-  },
-]
+import Carelist from "./components/Carelistcomp";
+import Card from "./components/Card";
+import { CareList, Benefitslist, Valueslist } from "./components/ListCollection";
 
 export default function Home() {
   const [model, setModel] = useState({ active: false, index: 0 })
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const lenis = new Lenis()
@@ -65,8 +33,6 @@ export default function Home() {
     }
   }, []);
 
-
-
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -76,7 +42,6 @@ export default function Home() {
         start: "50% 50%",
         end: "200% 50%",
         scrub: true,
-        // markers: true,
         pin: true
       }
     })
@@ -86,19 +51,19 @@ export default function Home() {
     }, "a")
 
     tl.to("#row_div_2", {
-      marginTop: "5%"
-    }, "a")
-
-    tl.to("#row_div_3", {
       marginTop: "-2%"
     }, "a")
 
+    tl.to("#row_div_3", {
+      marginTop: "-5%"
+    }, "a")
+
     tl.to("#row_div_4", {
-      marginTop: "-8%"
+      marginTop: "-7%"
     }, "a")
 
     tl.to("#row_div_5", {
-      marginTop: "-10%"
+      marginTop: "-9%"
     }, "a")
     tl.to("#over_lay h1", {
       opacity: "1"
@@ -128,7 +93,6 @@ export default function Home() {
         start: "0% 70%",
         end: "50% 50%",
         scrub: true,
-        // markers: true,
       }
     }).to("#rounded_wrap", {
       height: "0",
@@ -140,7 +104,6 @@ export default function Home() {
         start: "top 50%",
         end: "50% top",
         scrub: true,
-        // markers: true,
       }
     }).to("#part-3 .card-1", {
       opacity: 1,
@@ -173,7 +136,6 @@ export default function Home() {
         start: "top 50%",
         end: "50% 30%",
         scrub: true,
-        // markers: true,
       }
     }).to("#part-4 .card-1", {
       opacity: 1,
@@ -214,7 +176,6 @@ export default function Home() {
         start: "0% 90%",
         end: "50% 40%",
         scrub: 1,
-        // markers: true,
       }
     }).to("#rounded_wrap-6", {
       height: "0",
@@ -239,7 +200,7 @@ export default function Home() {
       <Navbar />
       <div id="part-1" className="w-full h-[100vh] bg-gray overflow-hidden">
         <div id="content-part-1" className="w-full h-[100vh] flex items-center justify-center">
-          <div id="rotate_div" className="lg:h-[190vh] lg:w-[190vw] md:[180vw] md:h-[150vh] w-[380vw] h-[120vh] gap-[1vw] flex items-start justify-center scale-[1]">
+          <div id="rotate_div" className="lg:h-[190vh] lg:w-[180vw] md:[180vw] md:h-[150vh] w-[380vw] h-[120vh] gap-[1vw] flex items-start justify-center scale-[1]">
             <div id="row_div_1" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)]">
               <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m1.jpg" alt="img_1" width={500} height={500} />
@@ -257,50 +218,50 @@ export default function Home() {
 
               </div>
             </div>
-            <div id="row_div_2" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[5%] md:mt-[10%]">
+            <div id="row_div_2" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[5%] md:mt-[11%]">
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m5.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m12.jpg" alt="img_1" width={500} height={500} />
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m6.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m11.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m7.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m14.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m8.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m13.jpg" alt="img_1" width={500} height={500} />
 
               </div>
             </div>
             <div id="row_div_3" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[0%] md:mt-[8%]">
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m1.jpg" alt="img_1" width={500} height={500} />
-              </div>
-              <div className="img_div">
                 <Image className="w-full h-full" src="/vfolder/m9.jpg" alt="img_1" width={500} height={500} />
+              </div>
+              <div className="img_div">
+                <Image className="w-full h-full" src="/vfolder/m10.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m2.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m15.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m3.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m16.jpg" alt="img_1" width={500} height={500} />
 
               </div>
             </div>
-            <div id="row_div_4" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[-4%] md:mt-[6%]">
+            <div id="row_div_4" className="row_div md:w-[calc(180vw/5)] lg:w-[calc(190vw/5)] w-[calc(380vw/5)] mt-[-4%] md:mt-[4%]">
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m4.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m19.jpg" alt="img_1" width={500} height={500} />
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m5.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m18.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
-                <Image className="w-full h-full" src="/vfolder/m6.jpg" alt="img_1" width={500} height={500} />
+                <Image className="w-full h-full" src="/vfolder/m17.jpg" alt="img_1" width={500} height={500} />
 
               </div>
               <div className="img_div">
@@ -351,7 +312,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="part-2" className="w-full h-[20vh] bg-white">
+      <div id="part-2" className="w-full h-[15vh] bg-white">
         <div id="rounded_wrap" className="w-full relative h-[100px] overflow-hidden mt-[-100px]">
           <div id="rounded-div" className="absolute left-[50%] w-[150%] h-[750%] rounded-[50%] bg-white"></div>
         </div>
@@ -359,89 +320,36 @@ export default function Home() {
       <div id="part-3" className="w-full h-max flex flex-col gap-[3vh]">
         <Headingpart title1="Values" title2="We Believe in" title3="We believe in creating an environment where individuals can thrive and make a meaningful impact." />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-[3vw] gap-[2vw]">
-          <div className="card-1 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">01.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/continious_learning.36f5be64.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Continious Learning</h1>
-            <p className="text-center">We invest in our team's growth through ongoing training, mentorship, and opportunities to expand your skill set. We're dedicated to your professional development journey.</p>
-          </div>
-          <div className="card-2 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">02.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/team_work.45929d57.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Team Work</h1>
-            <p className="text-center">We believe that best solutions comes from diverse perspective and collaborative efforts.</p>
-          </div>
-          <div className="card-3 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">03.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/innovation.1a2c3aca.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Innovation</h1>
-            <p className="text-center">Whether it's the quality of our work, the impact we make, or the relationships we build, we consistently strive for the highest standards.</p>
-          </div>
-          <div className="card-4 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">04.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/mentorship.d40ba16f.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Mentorship</h1>
-            <p className="text-center">We embrace change, learn from challenges, and remain resilient in the face of obstacles, always seeking opportunities for improvement.</p>
-          </div>
-          <div className="card-5 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">05.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/impact.cbd4d7d3.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Tangible Impact Impact</h1>
-            <p className="text-center">We're committed to delivering solutions that not only meet but exceed their expectations.</p>
-          </div>
-          <div className="card-6 relative overflow-hidden opacity-0 bg-zinc-100 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <div className="w-full text-[5vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-primary  absolute top-2 p-2">06.</div>
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/adaptability.f0ba4e14.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Adaptability</h1>
-            <p className="text-center">Thrive in a fast-paced world with resilience as your ally, valuing and cultivating adaptability in your career journey.</p>
-          </div>
+          {
+            Valueslist.map((item, index) => {
+              const { title, img, clsname, firstcard, para } = item
+              return (
+                <Card firstcard={firstcard} img={img} index={index + 1} para={para} title={title} clsname={clsname} />
+              )
+            })
+          }
+
         </div>
       </div>
-      <div id="part-4" className="h-max pt-[3vw] w-full bg-lightgray">
+      <div id="part-4" className="h-max pt-[5vw] w-full bg-lightgray flex flex-col gap-[3vw] sm:gap-0">
         <Headingpart title1="Benifits" title2="Life At MetaLogic" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-[3vw] gap-[1vw]">
-          <div className="card-1 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/flexible.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Flexibility at work</h1>
-            <p className="text-center">Do your best work at a time and place that fits us and your work-life balance.</p>
-          </div>
-          <div className="card-2 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-[3vw] gap-[2vw] sm:gap-[1vw]">
 
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/ownership.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Take Ownership</h1>
-            <p className="text-center">Take responsibility to solve customer challenges by acting as your own boss.</p>
-          </div>
-          <div className="card-3 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
 
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/growth.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Unlimited Growth</h1>
-            <p className="text-center">With no inner circle… absolutely everyone has the same opportunity to thrive.</p>
-          </div>
-          <div className="card-4 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/inclusivity.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Make Yourself Heard</h1>
-            <p className="text-center">We encourage diverse perspectives - making it count in achieving our collective goals.</p>
-          </div>
-          <div className="card-5 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/teamspirit.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Team Spirit</h1>
-            <p className="text-center">Come together, work as one - this is at the heart of how we work, achieve results and collaborate.</p>
-          </div>
-          <div className="card-6 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/inclusivity.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Inclusivity at Work</h1>
-            <p className="text-center">We believe that everyone is entitled to equal opportunities to learn, lead, and grow in all directions.</p>
-          </div>
-          <div className="card-7 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/transparent.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Transparent Environment</h1>
-            <p className="text-center">Build confidence in a culture of trust and open communication - with each other and our clients.</p>
-          </div>
-          <div className="card-8 bg-white relative overflow-hidden opacity-0 border-primary rounded p-[2vw] flex flex-col gap-[2vw] items-center justify-center">
-            <img className="h-[20vw] w-[20vw] md:h-[5vw] md:w-[5vw]" src="/icons/fulepassion.svg" alt="icons" />
-            <h1 className="text-primary font-semibold">Fuel Your Passion</h1>
-            <p className="text-center">We encourage you to strive, push the limits and achieve your dreams by being best you can be.</p>
-          </div>
+          {
+            Benefitslist.map((item, index) => {
+              const { title, img, clsname, firstcard, para } = item
+              return (
+                <Card firstcard={firstcard} img={img} index={index + 1} para={para} title={title} clsname={clsname} />
+              )
+            })
+          }
+
+
+
+
+
+
 
         </div>
       </div>
@@ -453,11 +361,11 @@ export default function Home() {
         <div className="text-[5vw] md:text-[3vw] text-gray relative">
 
           {
-            List.map((i, j) => (
+            CareList.map((i, j) => (
               <Carelist Item={i} key={j} index={j} Model={setModel} />
             ))
           }
-          <ImageComp List={List} Model={model} />
+          <ImageComp List={CareList} Model={model} />
         </div>
       </div>
       <div id="part-6" className="w-full h-[20vh] bg-gray">

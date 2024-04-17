@@ -39,7 +39,7 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <nav id="spnav" className="fixed hidden top-0 z-[1000] w-full bg-transparent items-center justify-between text-black backdrop-blur-xl border-b border-translucent-light-100 px-8 py-3 lg:flex">
+      <nav id="spnav" className="fixed hidden top-0 z-[1000] w-full bg-white items-center justify-between text-black backdrop-blur-xl border-b border-translucent-light-100 px-8 py-3 lg:flex">
         <Link href="/" className="flex items-center gap-4">
           <img src="https://metalogic.com.np/metalogo.png" alt="metalogic company logo" className="h-12 w-12" />
           <div className="flex flex-col">
