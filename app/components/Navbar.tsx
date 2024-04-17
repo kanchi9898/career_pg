@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   return (
     <main>
-      <div className="absolute z-[100] flex w-full items-center justify-between p-4 lg:hidden">
+      <div className="absolute bg-white z-[100] flex w-full items-center justify-between p-4 lg:hidden">
         <a className="flex items-center gap-4" href="/">
           <img src="https://metalogic.com.np/metalogo.png" alt="MetaLogic" className="h-12 w-12" />
           <div className="flex flex-col">
@@ -49,33 +49,33 @@ const Navbar = () => {
           </div>
         </Link>
         <div id="menu" className="flex gap-8 font-semibold relative">
-        
-            <Link href="/" className="menuopt relative">
-              Home
-            </Link>
-          
-        
-            <Link href="/" className="menuopt relative">Services</Link>
-          
-        
-            <Link href="/careers" id="activemenuopt" className="menuopt relative">Career
-            </Link>
-          
-        
-            <Link href="/blogs" className="menuopt relative">Blogs
-            </Link>
-          
-        
-            <Link href="/about" className="menuopt relative">About Us
-            </Link>
-          
+
+          <Link href="/" className="menuopt relative">
+            Home
+          </Link>
+
+
+          <Link href="/" className="menuopt relative">Services</Link>
+
+
+          <Link href="/careers" id="activemenuopt" className="menuopt relative">Career
+          </Link>
+
+
+          <Link href="/blogs" className="menuopt relative">Blogs
+          </Link>
+
+
+          <Link href="/about" className="menuopt relative">About Us
+          </Link>
+
         </div>
         <div className="group flex-[0.2] w-full bg-red text-white rounded flex items-center justify-center cursor-pointer">
-              <div className='p-1 overflow-hidden relative leading-8'>
-                <span className='inline-block transition duration-500 ease-out group-hover:-translate-y-[180%]'>Get In Touch</span>
-                <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Get In Touch</span>
-              </div>
-            </div>
+          <div className='p-1 overflow-hidden relative leading-8'>
+            <span className='inline-block transition duration-500 ease-out group-hover:-translate-y-[180%]'>Get In Touch</span>
+            <span className='absolute left-0 translate-y-[180%] rotate-12 inline-block p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0'>Get In Touch</span>
+          </div>
+        </div>
       </nav>
 
 

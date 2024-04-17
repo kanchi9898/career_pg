@@ -17,7 +17,7 @@ const Headingpart: React.FC<Iprop> = ({ title1, title2, title3, title2sp }) => {
             }
             {
                 title2sp?
-                <h1 className="text-white text-[8vw] md:text-[5vw] lg:text-[5vw] font-semibold">{title2sp}</h1>: null
+                <h1 className="text-white text-[8vw] md:text-[7vw] lg:text-[5vw] font-semibold">{title2sp}</h1>: null
             }
             {
                 title3 ?
